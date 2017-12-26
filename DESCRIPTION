@@ -1,0 +1,13 @@
+Package: ProbDist
+Type: Package
+Title: Some probability distribution
+Version: 0.2.0
+Author: O. Najafi <@ce.sharif.ir> ...
+Maintainer: H.R. Zare <hzare@ce.sharif.ir>
+Description: Some probability distribution has been implemented in this package.
+	Use it for free. And develope it if you'd like.
+	We are happy if anyone use it.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
