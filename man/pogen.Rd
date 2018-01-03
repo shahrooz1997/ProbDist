@@ -5,7 +5,7 @@
 generate poisson distribution
 }
 \description{
-A function for generating poisson distribution. This function uses expgen
+A function for generating poisson distribution. This function uses expgen.
 }
 \usage{
 myrv <- pogen(lambda)

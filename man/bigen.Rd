@@ -26,7 +26,7 @@ This function return 0 or 1.
 %% ~put references to the literature/web site here ~
 %}
 \author{
-ali rasekh (@ce.sharif.ir)
+ali rasekh (arasekh@ce.sharif.edu)
 }
 %\note{
 %%  ~~further notes~~

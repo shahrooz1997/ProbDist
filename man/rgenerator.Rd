@@ -26,7 +26,7 @@ produces a random number
 %% ~put references to the literature/web site here ~
 %}
 \author{
-Omid Najafi (@ce.sharif.ir)
+Omid Najafi (onajafi@ce.sharif.ir)
 }
 
 \seealso{

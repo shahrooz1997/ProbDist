@@ -27,7 +27,7 @@ return values of an R.V. that follows gamma distribution.
 %% ~put references to the literature/web site here ~
 %}
 \author{
-Ali Rasekh (@ce.sharif.ir)
+Ali Rasekh (arasekh@ce.sharif.ir)
 }
 %\note{
 %%  ~~further notes~~

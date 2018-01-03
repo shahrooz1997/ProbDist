@@ -26,7 +26,7 @@ produces another random integer from (-2^31) to (2^31-1)
 %% ~put references to the literature/web site here ~
 %}
 \author{
-Omid Najafi (@ce.sharif.ir)
+Omid Najafi (onajafi@ce.sharif.ir)
 }
 
 \seealso{
