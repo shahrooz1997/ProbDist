@@ -1,6 +1,6 @@
 #STEP 11
-#First we need to define the Rand_Gen functions! 
-source('randomFunctions.R')
+#First we need to define the Rand_Gen functions!
+#source('randomFunctions.R')
 
 library(ggplot2)
 
@@ -23,10 +23,10 @@ cugen_plot <- function(){
   for(i in 1:10000){
     value <- c(value, cugen())
   }
-  
+
   ggplot() + aes(value) + geom_histogram( fill='red')
   #value
-  
+
 }
 
 #cugen_plot()
@@ -38,7 +38,7 @@ brgen_plot <- function(p){
   for(i in 1:10000){
     value <- c(value, brgen(p))
   }
-  
+
   ggplot() + aes(value) + geom_histogram(binwidth=1, colour='black', fill='green')
 }
 
@@ -51,7 +51,7 @@ bigen_plot <- function(n, p){
   for(i in 1:10000){
     value <- c(value, bigen(n, p))
   }
-  
+
   ggplot() + aes(value) + geom_histogram(colour='black', fill='orange')
 }
 
@@ -64,7 +64,7 @@ gegen_plot <- function(p){
   for(i in 1:10000){
     value <- c(value, gegen(p))
   }
-  
+
   ggplot() + aes(value) + geom_histogram(binwidth=1, colour='black', fill='pink')
 }
 
@@ -77,7 +77,7 @@ expgen_plot <- function(lambda){
   for(i in 1:20000){
     value <- c(value, expgen(lambda))
   }
-  
+
   ggplot() + aes(value) + geom_histogram(colour='black', fill='brown')
 }
 
@@ -90,7 +90,7 @@ gagen_plot <- function(lambda, k){
   for(i in 1:20000){
     value <- c(value, gagen(lambda, k))
   }
-  
+
   ggplot() + aes(value) + geom_histogram(colour='black', fill='purple')
 }
 
@@ -103,7 +103,7 @@ pogen_plot <- function(lambda, t=1){
   for(i in 1:10000){
     value <- c(value, pogen(lambda, t=1))
   }
-  
+
   ggplot() + aes(value) + geom_histogram(colour='black', fill='cyan')
 }
 
@@ -116,7 +116,7 @@ nogen_plot <- function(u, s){
   for(i in 1:100){
     value <- c(value, nogen(u, s))
   }
-  
+
   ggplot() + aes(value) + geom_histogram(colour='black', fill='coral')
 }
 
