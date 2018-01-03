@@ -26,7 +26,7 @@ singleRandom <- function(number){
     Tchar <- "-6"
   else if(Tchar=="f" || Tchar=="F")
     Tchar <- "-7"
-
+  
   HexStr <- sprintf("%s%s",Tchar,substr(tempStr,2,8)) #cat(Tchar,substr(tempStr,2,8),sep="")
   #print(HexStr)
   #print(substr(tempStr,2,8))
@@ -70,7 +70,7 @@ cugen <- function(seed = NULL){
   if(is.null(seed)){
     seed <- as.numeric(Sys.time())*1000
   }
-  Rnum <- abs(singleRandom(seed))/(2^31)
+  Rnum <- abs(singleRandom(seed)/(2^31))
   return(Rnum)
 }
 
@@ -85,13 +85,28 @@ brgen <- function(p){
     return(0)
   }
 }
+# test bern :::::: test passed
+test.bern <- function(){
+  one <- 0
+  zero <- 0
+  for (i in 1:10000){
+    if(brgen(0.7) == 1){
+      one <- one + 1
+    }
+    else{
+      zero <- zero + 1
+    }
+  }
+  print(one / (zero + one))
+}
+
 
 ##step 5
 # A function for generating binomial distribution
 bigen <- function(n, p)
 {
   x <- 0
-
+  
   for(i in c(1:n))
   {
     if(cugen() <= p)
@@ -99,7 +114,7 @@ bigen <- function(n, p)
       x <- x + 1
     }
   }
-
+  
   return(x);
 }
 
@@ -113,7 +128,7 @@ gegen <- function(p){
   myrandnum = cugen()
   while(TRUE){
     if(sum < myrandnum && myrandnum < temp){
-      return(i)
+      return(i+1)
     }
     i <- i + 1
     sum <- temp
@@ -133,10 +148,10 @@ expgen <- function(lambda){
 gagen <- function(lambda, k)
 {
   x = 0
-
+  
   for(i in c(1, k))
     x = x + expgen(lambda)
-
+  
   return(x)
 }
 
@@ -147,14 +162,14 @@ pogen <- function(lambda, t = 1)
 {
   count <- 0
   spent.time <- 0
-
+  
   while(spent.time < t)
   {
     spent.time <- spent.time + expgen(lambda)
     count <- count + 1
   }
-
-  return(count)
+  
+  return(count-1)
 }
 
 ##STEP 10
@@ -190,9 +205,12 @@ nogen <- function(u, s){
 }
 
 # for testing nogen function:::::
-#sum <- 0
-#for(i in 1:100){
-#  sum <- sum + nogen(100, 5) - 100
-#  print(sum)
-#}
+
+# sum <- 0
+# for(i in 1:100){
+#   sum <- sum + nogen(100, 5)
+#   
+#   print(sum)
+# }
+
 
